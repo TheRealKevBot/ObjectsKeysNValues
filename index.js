@@ -1,5 +1,13 @@
 function keysAndValues(obj) {
-	
+	// let keys = Object.keys(obj)
+    // let values = Object.values(obj)
+	let keys = []
+    let values = []
+    for ([key, val] of Object.entries(obj)) {
+        keys.push(key)
+        values.push(val)
+    }
+    return [keys, values]
 } 
 
 console.log(keysAndValues({a: 1, b: 2, c: 3}), [["a", "b", "c"], [1, 2, 3]])
